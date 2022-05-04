@@ -16,7 +16,7 @@ RUN \
     libsasl2-dev \
     python3-pip && \
   echo "**** install runtime packages ****" && \
-  apt-get install -y \
+  DEBIAN_FRONTEND=noninteractive apt-get install -y \
     imagemagick \
     libnss3 \
     libxcomposite1 \
@@ -27,6 +27,7 @@ RUN \
     libxrandr2 \
     python3-minimal \
     python3-pkg-resources \
+    keyboard-configuration \
     calibre \
     unrar && \
   echo "**** install calibre-web ****" && \
