@@ -34,8 +34,10 @@ RUN \
     libxslt1.1 \
     python3-minimal \
     python3-pkg-resources \
-    calibre \
     unrar && \
+  echo "**** install calibre packages ****" && \
+  apt-get install -y \
+     calibre \
   echo "**** install calibre-web ****" && \
   if [ -z ${CALIBREWEB_RELEASE+x} ]; then \
     CALIBREWEB_RELEASE=$(curl -sX GET "https://api.github.com/repos/janeczku/calibre-web/releases/latest" \
