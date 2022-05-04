@@ -27,6 +27,7 @@ RUN \
     libxrandr2 \
     python3-minimal \
     python3-pkg-resources \
+    calibre \
     unrar && \
   echo "**** install calibre-web ****" && \
   if [ -z ${CALIBREWEB_RELEASE+x} ]; then \
